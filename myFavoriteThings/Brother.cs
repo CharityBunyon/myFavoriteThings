@@ -8,11 +8,16 @@ namespace myFavoriteThings
     {
         public string Name { get; set; }
         public int Age { get; set; }
-        public bool IsFunny => true;
+        public bool IsFunny { get; set; }
 
-        public Brother()
+        public Brother(string name, int age)
         {
-
+            Name = name;
+            Age = age;
+        }
+        public void IdentifyMe()
+        {
+            Console.WriteLine($"My name is {Name} and I'm {Age} years old.");
         }
     }
 }
